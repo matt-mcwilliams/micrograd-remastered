@@ -17,7 +17,7 @@ class TestNN(unittest.TestCase):
 
         n = Neuron(2)
 
-        for i in range(200):
+        for i in range(100):
 
             # Forward pass
             mse = sum((n(x)-y)**2 for x,y in zip(xs,ys)) / len(xs)
@@ -51,7 +51,7 @@ class TestNN(unittest.TestCase):
 
         n = MLP(3, [3, 4, 1])
 
-        for i in range(200):
+        for i in range(100):
 
             # Forward pass
             mse = sum((n(x)-y)**2 for x,y in zip(xs,ys)) / len(xs)

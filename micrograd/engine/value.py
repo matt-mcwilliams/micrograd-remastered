@@ -1,6 +1,9 @@
 import math
 
 class Value:
+    """
+    Base class for everything that needs to be backpropagated.
+    """
 
     def __init__(self, data, _prev=(), _op=''):
         self.data = data
@@ -113,3 +116,4 @@ class Value:
         out._backward = _backward
 
         return out
+
